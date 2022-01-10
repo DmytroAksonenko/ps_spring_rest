@@ -7,25 +7,19 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Book {
+public class Author {
 
 	private int id;
 
 	private String name;
-	
-	private int author;
 
-	private String genre;
+	private String surname;
 
-	private int price;
-
-	public Book(int id, String name, int author, String genre, int price) {
+	public Author(int id, String name, String surname) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.author = author;
-		this.genre = genre;
-		this.price = price;
+		this.surname = surname;
 	}
 
 }

@@ -2,18 +2,23 @@ package com.aksonenko.spring.dao;
 
 import java.util.List;
 
+import com.aksonenko.spring.entity.Author;
 import com.aksonenko.spring.entity.Book;
 
 public interface BookDAO {
 
-	public List<Book> getAllBooks();
+	List<Book> getAllBooks();
+	
+	List<Author> getAllAuthors();
 
-	public void addNewBook(Book book);
+	void addNewBook(Book book);
 
-	public void saveBook(Book book);
+	void saveBook(Book book);
+	
+	void updateBook(Book book);
 
-	public Book getBook(int id);
+	Book getBook(int id);
 
-	public void deleteBook(int id);
+	void deleteBook(int id);
 
 }

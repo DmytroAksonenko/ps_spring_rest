@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.aksonenko.spring.dao.BookDAO;
+import com.aksonenko.spring.entity.Author;
 import com.aksonenko.spring.entity.Book;
 
 @Service
@@ -17,6 +18,11 @@ public class BookServiceImpl implements BookService {
 	@Override
 	public List<Book> getAllBooks() {
 		return bookDAO.getAllBooks();
+	}
+	
+	@Override
+	public List<Author> getAllAuthors() {
+		return bookDAO.getAllAuthors();
 	}
 
 	@Override
@@ -30,16 +36,21 @@ public class BookServiceImpl implements BookService {
 		bookDAO.saveBook(book);
 
 	}
-
+	
 	@Override
 	public Book getBook(int id) {
 		return bookDAO.getBook(id);
+	}
+	
+	@Override
+	public void updateBook(Book book) {
+		bookDAO.updateBook(book);
+
 	}
 
 	@Override
 	public void deleteBook(int id) {
 		bookDAO.deleteBook(id);
-
 	}
 
 }

@@ -8,9 +8,7 @@
 	<h2>Book Info</h2>
 	<br>
 
-	<form:form method="POST" action="updateBook" modelAttribute="book">
-		
-		<input type="hidden" name="_method" value="PUT" />
+	<form:form method="POST" action="saveBook" modelAttribute="book">
 		
 		<form:hidden path="id"/>
 	
